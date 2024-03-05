@@ -1,6 +1,6 @@
 # Reinforcement learning pour un jeu simple en python
 
-Le but de ce projet est de refaire ce que j'ai fait pour [ce projet](https://github.com/Robin-dvn/) mais en python. Je vous invidique donc à lire le readMe du projet avant de continuer sur celui-ci.
+Le but de ce projet est de refaire ce que j'ai fait pour [ce projet](https://github.com/Robin-dvn/) mais en python. Je vous invite donc à lire le README du projet avant de continuer sur celui-ci.
 
 ## Motivations
 
@@ -8,9 +8,9 @@ Tout faire de zéro en C m'a permis de comprendre les maths et la théorie. Cepe
 
 J'ai voulu refaire ce projet en python pour les raisons suivantes:
 - Je maitrise maintenant la base théorique du Reinforcement learning
-- L'architecture du jeu est dejà construite et la recoder en python sera plus simple
+- L'architecture du jeu est dejà construite et la coder de nouveau en python sera plus simple
 - Python est orienté objet ce qui facilite grandement les choses
-- Il existe des librairies de machine learning et d'algèbre linéaire très simples d'utilisation (tensorflow, pytorch,numpy...) => pas d'erreures de calcul
+- Il existe des librairies de machine learning et d'algèbre linéaire très simples d'utilisation (tensorflow, pytorch,numpy...) => pas d'erreurs de calculs
 - Me concentrer sur la partie RL
 - Pas de gestion de mémoire :)
 
@@ -36,7 +36,7 @@ Après quelques séries d'entrainements:
 ## Utilisation
 
 Lancer main.py.
-Pour visualiser le travail du projet je vous invite à clone [ce projet](https://github.com/Robin-dvn/) et à lancer le jeu.exe 
+Pour visualiser le travail du projet je vous invite à clone [ce projet](https://github.com/Robin-dvn/) et à lancer le jeu.exe ! 
 
 
   
