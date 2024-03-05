@@ -24,6 +24,15 @@ Le projet est actuellement en pause mais je compte le reprendre quand j'aurai ga
 
 Voici une démo du comportement de l'agent. Il ne fait absolument pas ce qu'il faut après plusieurs séries d'entrainements...
 
+Début de l'entrainement:
+
+![GIF démo début](ressources/images/gif/debut.gif)
+
+Après quelques séries d'entrainements:
+
+![GIF démo fin](ressources/images/gif/fin.gif)
+
+
 ## Utilisation
 
 Lancer main.py.
