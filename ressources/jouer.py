@@ -139,6 +139,8 @@ def jouer( screen : pygame.Surface,map : str ):
                         player.inputFlags.space = False
 
             player.update_pos(map_sprites,group_sol)
+            if(not (player.en_jeu)):
+               en_jeu = False
             for entity in sprites:
                 screen.blit(entity.surf,entity.rect)
             pygame.display.flip()
