@@ -19,7 +19,7 @@ import math2
 def jouer( screen : pygame.Surface,map : str ):
 
 
-    auto = False
+    auto = True
 
     if auto :
         env = engine.Env(10,map,screen)
@@ -34,7 +34,7 @@ def jouer( screen : pygame.Surface,map : str ):
         
         
 
-        for i in range(100):
+        for i in range(5):
             states=env.reset()
             en_jeu = True
 

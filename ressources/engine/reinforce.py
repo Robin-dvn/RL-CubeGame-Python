@@ -1,6 +1,7 @@
 import torch.nn as nn
 import torch.optim as optim
 from torch.distributions.categorical import Categorical
+from torch.distributions.utils import probs_to_logits
 import numpy as np
 import torch
 
@@ -46,6 +47,7 @@ class REINFORCE:
         state = torch.tensor(np.array([state]))
         action_probs = self.net(state)
         
+        
         #print(action_probs)
 
 
@@ -53,8 +55,10 @@ class REINFORCE:
         
         action = distrib.sample()
         
-        prob = distrib.log_prob(action)
-
+        
+        logits =probs_to_logits(action_probs)
+        
+        prob = logits[0,action]   
         action = action.numpy()
 
         self.probs.append(prob)
@@ -66,6 +70,7 @@ class REINFORCE:
         running_g = 0
         gs = []
         self.rewards = bestplayer.reward *1
+        
         self.probs =bestplayer.probs *1
         
         
@@ -76,6 +81,7 @@ class REINFORCE:
             gs.insert(0, running_g)
 
         deltas = torch.tensor(gs)
+        print(deltas)
         
        
         
@@ -88,10 +94,12 @@ class REINFORCE:
         for log_prob, delta in zip(self.probs, deltas):
             
             loss += log_prob.mean() * delta 
+            
         print("loss",loss)
         if loss != 0.:
         
             # Update the policy network
+            loss = -loss
             self.optimizer.zero_grad()
             loss.backward()
             self.optimizer.step()

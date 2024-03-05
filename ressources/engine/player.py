@@ -216,7 +216,7 @@ class Player(pygame.sprite.Sprite):
             self.reward.append(0)
             
         else:
-            self.reward.append( self.pos[0] /40)
+            self.reward.append( self.pos[0])
             
     def canReward(self):
         
